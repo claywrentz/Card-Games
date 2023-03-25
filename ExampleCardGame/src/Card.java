@@ -45,7 +45,6 @@ public class Card {
         }
     }
     public void printCard(){
-        //TODO: use format to make printing look better
-        System.out.println(cardValueToString() + " of " + suit.toString() + " (" + color.toString() + ")");
+        System.out.printf("%s of %s (%s)\n", cardValueToString(), suit.toString(), color.toString());
     }
 }

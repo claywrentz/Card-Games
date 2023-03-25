@@ -23,7 +23,12 @@ public class Deck {
         return isShuffled;
     }
 
-    public void createDeck() {
+    public void initializeDeck(){
+        createDeck();
+        shuffleDeck();
+    }
+
+    private void createDeck() {
         int cardDeckIndex = 0;
         for (Suit suit : Suit.values()) {
             for (int i = 1; i < 14; i++){
@@ -34,7 +39,7 @@ public class Deck {
     }
 
     //TODO: develop algorithm to calculate how shuffled a deck is
-    public void shuffleDeck() {
+    private void shuffleDeck() {
         Random rnd = new Random();
         for (int i = 0; i < 52; i++) {
             Card tempCard = new Card(cardDeck[i]);
